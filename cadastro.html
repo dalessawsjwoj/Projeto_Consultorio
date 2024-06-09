@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="conteiner">
+        <img src="https://i0.wp.com/sanarmed.com/wp-content/uploads/2024/03/media-4331.jpg?fit=720%2C539&ssl=1">
+        
+        <div class="content">
+            <header>Cadastro</header>
+            <div class="form">
+                    <div class="input-field">
+                        <input type="text" class="input" id="nome" required="" autocomplete="off">
+                        <label for="email">Nome Completo</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="date" class="input" id="datanasc" required>
+                        <label for="pass">Data de Nascimento</label>
+                    </div> 
+                    <div class="input-field">
+                        <input type="text" class="input" id="cpf" required autocomplete="off">
+                        <label for="email">CPF</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="number" class="input" id="telefone" required>
+                        <label for="pass">Telefone</label>
+                    </div> 
+                    <div class="input-field">
+                        <input type="text" class="input" id="endereco" required autocomplete="off">
+                        <label for="email">Endereço</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="email" class="input" id="email" required>
+                        <label for="pass">Email</label>
+                    </div> 
+                    <div class="input-field">
+                        <input type="password" class="input" id="senha" required autocomplete="off">
+                        <label for="email">Senha</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="password" class="input" id="conf-senha" required>
+                        <label for="pass">Confirmar Senha</label>
+                    </div>
+            </div>
+
+            <div class="input-circles">
+                <div class="circle-1">
+                    <input type="radio" class="circles" name="1" required>
+                    <label>Médico</label>
+                </div>
+                <div class="circle-2">
+                    <input type="radio" class="circles" name="1" required>
+                    <label>Paciente</label>
+                </div>  
+            </div>
+
+            <div class="input-field">
+                <input type="text" class="input" id="CRM" required>
+                <label>CRM</label>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" class="submit" value="Cadastrar">
+           </div> 
+
+            <div class="signin">
+                <span>Já tem uma conta? <a href="login.html">Login</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

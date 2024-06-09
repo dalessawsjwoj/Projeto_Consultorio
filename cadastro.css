@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.conteiner{
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+    width: 1200px;
+    display: flex;
+    height: 670px;
+    border-radius: 10px;
+}
+
+.conteiner img {
+    width: 600px;
+    height: 670px;
+    border-radius: 10px 0 0 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.content header {
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 45px;
+    margin-top: 10px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    height: 350px;
+    padding: 0 20px 0 20px;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.input-circles{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: auto 20px auto 20px;
+    margin: auto auto 7px auto;
+    width: 600px;
+}
+
+.input-circles label {
+    position: relative;
+    bottom: 2px;
+}
+
+.input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 40px;
+    color: #40414a;
+}
+
+#CRM{
+    width: 540px;
+}
+
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit-text,
+input[type="date"]:focus::-webkit-datetime-edit-month-field,
+input[type="date"]:focus::-webkit-datetime-edit-day-field,
+input[type="date"]:focus::-webkit-datetime-edit-year-field,
+input[type="date"]:valid::-webkit-datetime-edit-text,
+input[type="date"]:valid::-webkit-datetime-edit-month-field,
+input[type="date"]:valid::-webkit-datetime-edit-day-field,
+input[type="date"]:valid::-webkit-datetime-edit-year-field {
+    color: black;
+}
+	
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 13px;
+  }
+
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 13px;
+   color: #5d5076;
+ }
+
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+ }
+
+ .submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    width: 540px;
+    background: #ececec;
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+ }
+ .submit:hover{
+    background: #4070F4;
+    color: #fff;
+ }
+ .signin{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p, i{
+        font-size: 16px;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
+}
