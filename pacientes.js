@@ -1,4 +1,3 @@
-
 var menuItem = document.querySelectorAll('.item-menu')
 
 function selectLink(){
@@ -24,32 +23,21 @@ btnExp.addEventListener('click', function(){
     header.classList.toggle('expandir')
 })
 
-function adicionarCard() {
-    var box = document.querySelector('.swiper-wrapper');
+function abrir_fechar() {
+        var box = document.querySelector('.conteiner-agend');
     
-    var novocard = `
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay"></span>
-
-                    <div class="card-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqaAkRBaosXnlvCBn0YPbyhTPlEMIr84Ezg&s" alt="" class="card-img">
-                    </div>
-                </div>
-
-                <div class="card-content">
-                    <h2 class="name">Mosely Jober</h2>
-                    <p class="description">
-                        Categoria desejada: Ortopedista 
-                        <br>
-                        Data: 24/12/2024
-                        <br>
-                        Horário: 20:00
-                    </p>
-
-                    <button class="button">Ler mais</button>
-                </div>
-            </div>
-`;
-    box.innerHTML("beforeend", novocard);
-  }
+        if (box.classList.contains("fechado")) {
+            box.classList.remove("apagado")
+    
+            setTimeout(function () {
+                box.classList.remove("fechado")
+            }, 1);
+             
+        } else {
+            box.classList.add("fechado")
+    
+            setTimeout(function () {
+                box.classList.add("apagado")
+            }, 500);
+        } 
+}

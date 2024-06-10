@@ -74,7 +74,7 @@
         </ul>
     </nav>
 
-    <div class="conteiner2 ok">
+    <div class="conteiner2">
         <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
@@ -291,21 +291,140 @@
                                 Horário: 20:00
                             </p>
 
-                            <button class="button">Ler mais</button>
+                            <button class="button" onclick="">Ler mais</button>
+
                         </div>
                     </div>
-                    
-                    
                 </div>
             </div>
 
             <div class="swiper-button-next swiper-navBtn"></div>
             <div class="swiper-button-prev swiper-navBtn"></div>
             <div class="swiper-pagination"></div>
-        </div>  
+        </div> 
 
-        <button onclick="adicionarCard()">teste adicionar paciente</button>
+        <div class="add-remover">
+            <button class="add" onclick="abrir_fechar()">adicionar</button>
+            <button class="remove" onclick="remover()">remover</button>
+        </div>
 
+    </div>
+
+    <div class="conteiner-agend fechado apagado">
+        <button class="btn-fechar" onclick="abrir_fechar()"> <i class="bi bi-x"></i> </button>
+        <div class="flex-conteiner">
+            <div class="grid">
+                <div class="dados-paciente">
+
+                <h3>Dados Paciente</h3>
+                    <div class="input-field">
+                        <input type="number" class="input" id="nome" required autocomplete="off">
+                        <label for="email">ID</label> 
+                    </div>                    
+                    <div class="input-field">
+                        <input type="text" class="input" id="nome" required autocomplete="off">
+                        <label for="email">Nome Completo</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="date" class="input" id="datanasc" required>
+                        <label for="pass">Data de Nascimento</label>
+                    </div> 
+                    <div class="input-field">
+                        <input type="text" class="input" id="cpf" required autocomplete="off">
+                        <label for="email">CPF</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="number" class="input" id="telefone" required>
+                        <label for="pass">Telefone</label>
+                    </div> 
+                    <div class="input-field">
+                        <input type="text" class="input" id="endereco" required autocomplete="off">
+                        <label for="email">Endereço</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="email" class="input" id="email" required>
+                        <label for="pass">Email</label>
+                    </div> 
+                </div>
+    
+                <div class="dados-consulta">
+                    <h3>Dados da Consulta</h3>
+    
+                    <div class="select-area">
+                        <label>Especialidade</label>
+                        <select name="Area" id="areamedica">
+                            <option value="">Selecione uma área médica</option>
+                            <option value="Cardiologia">Cardiologia</option>
+                            <option value="Dermatologia">Dermatologia</option>
+                            <option value="Endocrinologia">Endocrinologia</option>
+                            <option value="Gastroenterologia">Gastroenterologia</option>
+                            <option value="Neurologia">Neurologia</option>
+                            <option value="Oftalmologia">Oftalmologia</option>
+                            <option value="Ortopedia">Ortopedia</option>
+                            <option value="Pediatria">Pediatria</option>
+                            <option value="Urologia">Urologia</option>
+                        </select>
+                    </div>
+    
+                    <div class="select-area">
+                        <label>Médico</label>
+                        <select name="medico-area" id="nome-medico">
+                            <option value="">Selecione um médico</option>
+                            <option value="Cardiologia">Renata Gaúcha</option>
+                            <option value="Dermatologia">Pedro Pereira</option>
+                            <option value="Endocrinologia">Freddie Kazinski</option>
+                            <option value="Gastroenterologia">Luis Figueira</option>
+                            <option value="Neurologia">Marcelo Bonfá</option>
+                            <option value="Oftalmologia">João Pedro</option>
+                            <option value="Ortopedia">Felipe Rodrigues</option>
+                            <option value="Pediatria">Jardson Silva</option>
+                            <option value="Urologia">Juracy de Paula</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input type="date" class="input" id="dataconsult" required>
+                        <label for="pass">Data da consulta</label>
+                    </div>
+    
+                    <div class="select-area">
+                        <label>Horário</label>
+                        <select name="horario" id="idDoSelect">
+                            <option value="">Selecione um horário</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-field">
+                        <input type="text" class="input" id="detalhes" required>
+                        <label for="pass">Descrição</label>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" onclick="criar(); abrir_fechar()" class="submit" value="Agendar">
+            </div>
+
+        </div>
     </div>
 
 </main>
@@ -350,11 +469,11 @@
         </ul>  
 
         <div id="footer_subscribe">
-            <h3>Subscribe</h3>
+            <h3>Inscreva-se</h3>
 
             <p>
-                Enter yout email to get notified about 
-                our news solutions
+                Insira seu e-mail para que possamos
+                atualizá-lo.
             </p>
 
                 <div id="input_group">
@@ -368,12 +487,12 @@
 
     <div id="footer_copyright">
         &#169
-        2023 all right reserved
+        2023 todos os direitos reservados
     </div>
 </footer>
 
+<script src="pacientes.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
-<script src="pacientes.js"></script>
 
 </html>
